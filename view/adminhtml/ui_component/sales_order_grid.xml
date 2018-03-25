@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <columns name="sales_order_columns">
+        <column name="tax" class="Yireo\OrderGridFilterVat\Ui\Component\Listing\Column\Tax">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="bodyTmpl" xsi:type="string">ui/grid/cells/html</item>
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="label" xsi:type="string" translate="true">Tax</item>
+                </item>
+            </argument>
+            <settings>
+                <filter>select</filter>
+                <options class="Yireo\OrderGridFilterVat\Ui\Component\Listing\Column\Tax\Options" />
+                <dataType>select</dataType>
+                <label translate="true">Tax</label>
+                <visible>true</visible>
+            </settings>
+        </column>
+        <column name="group" class="Yireo\OrderGridFilterVat\Ui\Component\Listing\Column\Group">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="label" xsi:type="string" translate="true">Customer Group</item>
+                </item>
+            </argument>
+            <settings>
+                <filter>select</filter>
+                <options class="Yireo\OrderGridFilterVat\Ui\Component\Listing\Column\Group\Options" />
+                <dataType>select</dataType>
+                <label translate="true">Customer Group</label>
+                <visible>true</visible>
+            </settings>
+        </column>
+    </columns>
+</listing>
